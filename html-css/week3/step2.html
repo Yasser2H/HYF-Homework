@@ -3,25 +3,54 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Your Custom Tailor</title>
+  <title>Your Custom Tailor - Step 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  
+<body class="class-for-step2">
+
   <div class="banner">
 
   </div>
   <div class="details">
-
+    <h2>Sign up to yourcustomtailor.com</h2>
   </div>
   <div class="progress-bar">
-
+    <h2>Step 2/4 - How can we reach you?</h2>
+    <p>We will probably need to stay in touch somehow. Let us know how can we reach you?</p>
   </div>
   <div class="form">
-
+    <form>
+      <div class="first-row">
+        <label for="email-address"><strong>Email Address*</strong></label>
+        <input name="email-address" type="email" value="" />
+        <label for="phone-number"><strong>Phone Number</strong></label>
+        <input name="phone-number" type="tel" value="" />
+      </div>
+      <div class="second-row">
+        <label for="enter-password"><strong>Password*</strong></label>
+        <input name="enter-password" type="password" value="" /><br>
+        <label for="reenter-password"><strong>Re-enter Password*</strong></label>
+        <input name="reenter-password" type="password" value="" />
+      </div>
+      <div class="third-row">
+        <p>I want to sign up for the newsletter</p>
+        <input checked="checked" name="newsletter" type="radio" value="weekly" /> Weekly news <br />
+        <input name="newsletter" type="radio" value="monthly" /> Monthly news<br />
+        <input name="newsletter" type="radio" value="do-not-send" /> Don't send me news<br />
+      </div>
+      <div class="fourth-row">
+      </div>
+    </form>
   </div>
   <div class="footer">
-
+    <br>
+    <button onclick="location.href='index.html'" type="button">Previous Step</button>
+    <button onclick="location.href='step3.html'" type="button">Next Step</button>
+    <br>
+    <br>
   </div>
 
 </body>

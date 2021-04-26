@@ -1,3 +1,58 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
+
+.step3-third-row  ul {
+    list-style-type: none;
+  }
+
+.step3-third-row  li {
+    display: inline-block;
+  }
+
+.step3-third-row  input[type="checkbox"][id^="myCheckbox"] {
+    display: none;
+  }
+
+.step3-third-row  label {
+    border: 1px solid #fff;
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+.step3-third-row  label:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+  }
+
+.step3-third-row  label img {
+    height: 100px;
+    width: 100px;
+  }
+
+.step3-third-row  :checked+label {
+    border-color: #ddd;
+  }
+
+.step3-third-row  :checked+label:before {
+    content: "✓";
+    background-color: grey;
+  }
+
+.step3-third-row  :checked+label img {
+    box-shadow: 0 0 5px #333;
+  }
