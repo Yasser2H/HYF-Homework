@@ -63,7 +63,9 @@ const seriesDurations = [{
 ];
 
 const lifeSpanInMin = 80 * 365 * 24 * 60;
-let totalTime = 0, seriesTimeInMinutes = 0, lifeSpanPerSerie = 0;
+let totalTime = 0,
+  seriesTimeInMinutes = 0,
+  lifeSpanPerSerie = 0;
 
 function logOutSeriesText(seriesDurations) {
   for (var i = 0; i < seriesDurations.length; i++) {
@@ -75,5 +77,73 @@ function logOutSeriesText(seriesDurations) {
   console.log("In total that is " + totalTime.toFixed(3) + "% of my life");
 }
 logOutSeriesText(seriesDurations);
+
+// Save a note + Get a note + Log out notes
+console.log("------------------ 4th Task ------------------");
+const notes = [];
+
+function saveNote(content, id) {
+  let obj = {
+    content: content,
+    id: id
+  };
+  for (var i = 0; i < notes.length; i++) {
+    if (notes[i].id == id) {
+      return "This Id is already used, try different Id!";
+    }
+  }
+  notes.push(obj);
+}
+
+function getNote(id) {
+  for (var i = 0; i < notes.length; i++) {
+    if (notes[i].id == id) {
+      return notes[i];
+    } else {
+      return "This Id is not specified, or it's not a number, try different Id!";
+    }
+  }
+}
+
+saveNote("Pick up groceries", 1);
+saveNote("Do laundry", 2);
+saveNote("Make dinner", 3);
+saveNote("Repair the car", 4);
+console.log(notes); // [{content: 'Pick up groceries', id: 1}, {content: 'Do laundry', id: 2}]
+
+let firstNote = getNote(1);
+firstNote = getNote(3);
+console.log(firstNote); // {content: 'Pick up groceries', id: 1}
+
+function logOutNotesFormatted() {
+  console.log("- Log out notes:");
+  for (var i = 0; i < notes.length; i++) {
+    console.log("The note with Id: " + notes[i].id + ", has the following note text: " + notes[i].content);
+  }
+}
+
+logOutNotesFormatted(); // should log out the text below
+
+function spaceToBorders(charCount) {
+  let spaces = "";
+  for (var i = 0; i < 23 - charCount; i++) {
+    spaces += " ";
+  }
+  return spaces;
+}
+
+function logOutNotesGridView() {
+  console.log("- Log out notes in grid view: (Unique feature)");
+  console.log("----------------------------------------------");
+  console.log("|   Note Id   |         Note Content         |");
+  console.log("----------------------------------------------");
+  for (var i = 0; i < notes.length; i++) {
+    console.log("|      " + notes[i].id + "      |       " + notes[i].content + spaceToBorders(notes[i].content.length) + "|");
+  }
+  console.log("----------------------------------------------");
+}
+
+logOutNotesGridView(); // Unique feature
+
 
 //
