@@ -56,13 +56,18 @@ console.log(findDanishLettersCount(danishString2)); // returns {total: 4, æ: 1,
 // Spirit animal name generator
 console.log("---------------------- 3rd Task - Spirit animal name generator ----------------------");
 const spiritAnimalList = ["Butterfly", "Spider", "Crow", "Owl", "Hummingbird", "Hawk", "Grasshopper", "Eagle", "Fox", "Wolf"];
-let randNum = Math.floor(Math.random() * 10);
+
+
+function getRndNum() {
+  return Math.floor(Math.random() * 10);
+}
 
 function getInputValue() {
   // Selecting the input element and get its value
   var inputName = document.getElementById("nameInput").value;
   if (!inputName == "") {
-    document.getElementById("yourSpiritAnimal").innerHTML = ("Your Spirit Animal: " + inputName + " - The " + spiritAnimalList[randNum]);
+    document.getElementById("yourSpiritAnimal").innerHTML = ("Your Spirit Animal: " + inputName + " - The " + spiritAnimalList[getRndNum()]);
+    document.getElementById("getSpiritBtn").disabled = true;
   } else {
     alert("Please input a name");
   }
