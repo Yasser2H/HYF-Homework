@@ -1,13 +1,13 @@
 // Find the shortest word
 console.log("---------------------- 1st Task - Find the shortest word ----------------------");
-const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"];
+const danishWords = ["bil", "plante", "kaffe", "bog", "øøøø", "planetarium"];
 
 function findShortestWord(list) {
-  let shortestWordLength = 100,
+  let shortestWordLength = list[0].length+1,
     shortestWordIndex;
   for (var i = 0; i < list.length; i++) {
     if (shortestWordLength > list[i].length) {
-      shortestWordLength = list[i];
+      shortestWordLength = list[i].length;
       shortestWordIndex = i;
     }
   }
@@ -19,20 +19,22 @@ console.log("The shortest word in the list is: " + findShortestWord(danishWords)
 console.log("---------------------- 2nd Task - Find Danish letters count ----------------------");
 const danishString1 = "Jeg har en blå bil";
 const danishString2 = "Blå grød med røde bær";
-let danishLettersCount = [0, 0, 0];
-let danishLettersCountTotal = 0;
+let danishLettersCount;
+let danishLettersCountTotal;
 
 function findDanishLettersCount(list) {
+  danishLettersCount = [0, 0, 0];
+  danishLettersCountTotal = 0;
   for (var i = 0; i < list.length; i++) {
     let checkWord = list[i];
     for (var j = 0; j < checkWord.length; j++) {
-      isDanishLetterFound(checkWord[j]);
+      danishLetterFound(checkWord[j]);
     }
   }
   return ("{total: " + danishLettersCountTotal + ", æ: " + danishLettersCount[0] + ", ø: " + danishLettersCount[1] + ", å: " + danishLettersCount[2] + "}");
 }
 
-function isDanishLetterFound(letter) {
+function danishLetterFound(letter) {
   switch (letter) {
     case "æ":
       danishLettersCount[0] = danishLettersCount[0] + 1;
@@ -56,7 +58,6 @@ console.log(findDanishLettersCount(danishString2)); // returns {total: 4, æ: 1,
 // Spirit animal name generator
 console.log("---------------------- 3rd Task - Spirit animal name generator ----------------------");
 const spiritAnimalList = ["Butterfly", "Spider", "Crow", "Owl", "Hummingbird", "Hawk", "Grasshopper", "Eagle", "Fox", "Wolf"];
-
 
 function getRndNum() {
   return Math.floor(Math.random() * 10);
