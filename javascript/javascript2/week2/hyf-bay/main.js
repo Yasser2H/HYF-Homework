@@ -36,11 +36,12 @@ inputFieldName.addEventListener("keyup", () => {
 // The User can filter products by price
 const inputRangePrice = document.querySelector("#inputPrice");
 let labelLowestPrice = document.getElementById("lowestPrice");
+let filterdProductsByPrice;
 inputRangePrice.addEventListener("input", () => {
-  resultedProducts = products.filter(product => product.price < inputPrice.value);
+  filterdProductsByPrice = resultedProducts.filter(product => product.price < inputPrice.value);
   productsUl.innerHTML = "";
   labelLowestPrice.innerHTML = "Lower Price: " + inputPrice.value;
-  renderProducts(resultedProducts);
+  renderProducts(filterdProductsByPrice);
 });
 
 // Fun to capitalize the First Letter of a string
