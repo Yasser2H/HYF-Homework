@@ -1,0 +1,14 @@
+[
+  {
+    "name" : "Coca-Cola",
+    "Founded" : "1892",
+    "Location" : "Atlanta, USA",
+    "sugar" : 39
+  },
+  {
+    "name" : "Pepsi",
+    "Founded" : "1986",
+    "Location" : "New York, USA",
+    "sugar" : 41
+  }
+]
