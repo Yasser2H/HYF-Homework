@@ -1,0 +1,120 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: auto;
+}
+
+.top {
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: flex-start;
+}
+
+.left-player {
+    width: 49.7%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#h3-press-s, #left-current-score, #h3-press-l, #right-current-score{
+    height: 2px;
+    margin: 10px;
+}
+
+
+.right-player {
+    width: 49.7%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+#h1-title {
+    font-family: "Brush Script MT", cursive;
+    color: #575757;
+    font-size: 52px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+}
+
+#input-seconds {
+    width: 180px;
+    text-align:center;
+    padding: 5px;
+    font-size: 16px;
+    border-width: 1px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 0px;
+    box-shadow: 0px 1px 3px rgba(66, 66, 66, .80);
+}
+
+#input-seconds:focus {
+    outline: none;
+}
+
+#btn-start-game {
+    box-shadow: inset 0px 1px 0px 0px #caefab;
+    background: linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+    background-color: #77d42a;
+    border-radius: 2px;
+    border: 1px solid #268a16;
+    display: inline-block;
+    cursor: pointer;
+    color: #244408;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #aade7c;
+    margin-top: 20px;
+}
+
+#btn-start-game:hover {
+    background: #5cb811 linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
+}
+
+#btn-start-game:active {
+    position: relative;
+    top: 1px;
+}
+
+
+
+
+
+
