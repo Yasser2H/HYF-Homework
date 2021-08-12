@@ -15,25 +15,25 @@ CREATE TABLE `staff` (
     `email` varchar(255) NOT NULL,
     `phone` varchar(255) NOT NULL,
     `hired_date` DATETIME NOT NULL
-  );
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 CREATE TABLE `office` (
     `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `address` varchar(255) NOT NULL,
     `room_number` int(10) unsigned NOT NULL
-  );
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 CREATE TABLE `job` (
     `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `title` varchar(255) NOT NULL,
     `description` varchar(255) NOT NULL,
     `department` varchar(255) NOT NULL,
     CONSTRAINT `fk_job_office` FOREIGN KEY (`job_id`) REFERENCES `office` (`id`) ON DELETE CASCADE
-  );
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 CREATE TABLE `staff_office` (
     `staff_id` int(10) unsigned NOT NULL,
     `office_id` int(10) unsigned NOT NULL,
     PRIMARY KEY(`staff_id`, `office_id`),
     CONSTRAINT `fk_staff_office_staff` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT `fk_staff_office_office` FOREIGN KEY (`office_id`) REFERENCES `office` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-  );
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 

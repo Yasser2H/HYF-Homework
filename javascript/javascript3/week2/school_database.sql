@@ -17,8 +17,8 @@ Use school_database;
 CREATE TABLE `class` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255) NOT NULL,
-  `begins` DATETIME NOT NULL,
-  `ends` DATETIME NOT NULL
+  `begins` DATE NOT NULL,
+  `ends` DATE NOT NULL
 );
 
 /* Create student table */
