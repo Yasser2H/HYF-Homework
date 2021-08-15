@@ -14,7 +14,7 @@ CREATE TABLE `staff` (
     `name` varchar(255) NOT NULL,
     `email` varchar(255) NOT NULL,
     `phone` varchar(255) NOT NULL,
-    `hired_date` DATETIME NOT NULL
+    `hired_date` DATE NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 CREATE TABLE `office` (
     `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -24,9 +24,10 @@ CREATE TABLE `office` (
 CREATE TABLE `job` (
     `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `title` varchar(255) NOT NULL,
+    `office_id` int(10) NOT NULL,
     `description` varchar(255) NOT NULL,
     `department` varchar(255) NOT NULL,
-    CONSTRAINT `fk_job_office` FOREIGN KEY (`job_id`) REFERENCES `office` (`id`) ON DELETE CASCADE
+    CONSTRAINT `fk_job_office` FOREIGN KEY (`office_id`) REFERENCES `office` (`id`) ON DELETE CASCADE
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 CREATE TABLE `staff_office` (
     `staff_id` int(10) unsigned NOT NULL,
