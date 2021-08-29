@@ -5,7 +5,7 @@ const reviews = require("./../data/reviews.json");
 
 router.get("/", async (request, response) => {
     try {
-        response.send({data: reviews});
+        response.send(reviews);
     } catch (error) {
         throw response.send(400).json(error);
     }
@@ -20,7 +20,7 @@ router.get("/:id", async (request, response) => {
         if (filteredReviews.length === 0){
             return response.status(200).json({message: "Review not found!"});
         } else {
-            response.send({data: filteredReviews});
+            response.send(filteredReviews[0]);
         }
 
     } catch (error) {

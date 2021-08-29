@@ -14,11 +14,7 @@ router.get("/", async (request, response) => {
                 response.send(meals.filter(meal => meal.price <= reqQuery.maxPrice));
             }
         } else if (reqQuery.title) {
-            if (isNaN(parseInt(reqQuery.title))) {
-                return response.status(400).json({error: "The input is not a title!"});
-            } else {
-                response.send(meals.filter(meal => meal.title.toLowerCase().includes(reqQuery.title)));
-            }
+            response.send(meals.filter(meal => meal.title.toLowerCase().includes(reqQuery.title)));
         } else if (reqQuery.createdAfter) {
             if (isNaN(parseInt(reqQuery.createdAfter))) {
                 return response.status(400).json({error: "The input is not a date!"});
@@ -48,7 +44,7 @@ router.get("/:id", async (request, response) => {
         if (filteredMeals.length === 0) {
             return response.status(200).json({message: "Meal not found!"});
         } else {
-            response.send({data: filteredMeals});
+            response.send(filteredMeals[0]);
         }
 
     } catch (error) {
