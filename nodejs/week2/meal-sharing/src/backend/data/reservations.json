@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "First person name",
+    "email": "first@email.com",
+    "mealId": 2
+  },
+  {
+    "id": 2,
+    "name": "Second person name",
+    "email": "second@email.com",
+    "mealId": 5
+  }
+]

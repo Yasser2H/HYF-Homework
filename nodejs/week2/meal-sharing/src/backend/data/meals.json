@@ -1,0 +1,50 @@
+[
+    {
+        "id" : 1,
+        "title" : "Indian food",
+        "maxNumberOfGuests" : 8,
+        "description" : "A nice night out eating delicious Indian food",
+        "createdAt" : "2018/12/7 14:34",
+        "price" : 40
+    },
+    {
+        "id" : 2,
+        "title" : "Mexican food",
+        "maxNumberOfGuests" : 7,
+        "description" : "A nice night out eating delicious Mexican food",
+        "createdAt" : "2019/12/7 14:34",
+        "price" : 85
+    },
+    {
+        "id" : 3,
+        "title" : "Italian food",
+        "maxNumberOfGuests" : 6,
+        "description" : "A nice night out eating delicious Italian food",
+        "createdAt" : "2021/02/8 14:34",
+        "price" : 69
+    },
+    {
+        "id" : 4,
+        "title" : "Thai food",
+        "maxNumberOfGuests" : 5,
+        "description" : "A nice night out eating delicious Thai food",
+        "createdAt" : "2019/12/7 14:34",
+        "price" : 45
+    },
+    {
+        "id" : 5,
+        "title" : "American food",
+        "maxNumberOfGuests" : 4,
+        "description" : "A nice night out eating delicious American food",
+        "createdAt" : "2020/12/7 14:34",
+        "price" : 70
+    },
+    {
+        "id" : 6,
+        "title" : "Danish food",
+        "maxNumberOfGuests" : 8,
+        "description" : "A nice night out eating delicious Danish food",
+        "createdAt" : "2021/02/7 16:34",
+        "price" : 120
+    }
+]

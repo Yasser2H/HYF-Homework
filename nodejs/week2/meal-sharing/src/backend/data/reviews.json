@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "numberOfStars": 4,
+    "content": "I liked it!",
+    "mealId": 3,
+    "createdAt": "2021/02/8 14:34"
+  },
+  {
+    "id": 2,
+    "numberOfStars": 3,
+    "content": "Nice meal",
+    "mealId": 4,
+    "createdAt": "2021/02/8 14:34"
+  }
+]
